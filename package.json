@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4",
+    "node-schedule": "^2.1.0",
+    "nodemon": "^2.0.18",
+    "p-iteration": "^1.1.8",
+    "qr-image": "^3.2.0",
+    "qrcode-terminal": "^0.12.0",
+    "uuid": "^8.3.2",
+    "whatsapp-web.js": "^1.17.1"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
