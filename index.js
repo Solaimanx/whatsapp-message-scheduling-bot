@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL,'https://www.english21days.co.il','https://app.funnel-preview.com'],
+    origin: [process.env.FRONTEND_URL,'https://whatsapp-flow.vercel.app','https://www.english21days.co.il','https://app.funnel-preview.com'],
     methods: ["GET", "PUT", "POST", "DELETE", "OPTIONS", "PATCH"],
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     credentials: true,
