@@ -13,10 +13,10 @@ const whatsapp = require("./whatsappWeb");
 
 
 initDb();
-checkScheduleExpried()
-everyDayUpdateContactList()
+// checkScheduleExpried()
+// everyDayUpdateContactList()
 
-scheduleAllPending()
+// scheduleAllPending()
 whatsapp.client.initialize();
 
 
