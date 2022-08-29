@@ -2,9 +2,13 @@ const qrcode = require("qrcode-terminal");
 const email = require("./utils/sendEmail");
 const qrImage = require("qr-image");
 const fs = require("fs");
-const { Client, LocalAuth, GroupChat } = require("whatsapp-web.js");
+const { Client, LocalAuth, LegacySessionAuth } = require("whatsapp-web.js");
 const client = new Client({
-  authStrategy: new LocalAuth(),
+  authStrategy: new LegacySessionAuth(),
+  puppeteer: {
+    headless: true,
+    args: ["--no-sandbox"],
+  },
 });
 
 client.on("qr", async (qr) => {
