@@ -12,7 +12,7 @@ const getAllContacts = async () => {
 };
 
 const updateContactList = async () => {
-  const group = await getGroupListFunction();
+  const group = await getGroupListFunction('yes');
   var arrayData = [];
 
   try {

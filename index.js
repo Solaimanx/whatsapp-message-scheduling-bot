@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 console.log(process.env.FRONTEND_URL)
-
+  
 
 app.use(
   cors({
