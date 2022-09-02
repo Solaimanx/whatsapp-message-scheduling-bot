@@ -12,7 +12,7 @@ const routes = require("./routes");
 const whatsapp = require("./whatsappWeb");
 
 
-initDb();
+// initDb();
 // checkScheduleExpried()
 // everyDayUpdateContactList()
 
