@@ -29,9 +29,9 @@ client.on("ready", async () => {
 });
 
 // authentication
-client.on("authenticated", (session) => {
-  console.log(JSON.stringify(session));
-});
+// client.on("authenticated", (session) => {
+//   console.log(JSON.stringify(session));
+// });
 
 client.on("auth_failure", async (msg) => {
   const message =
