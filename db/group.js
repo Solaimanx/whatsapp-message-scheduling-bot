@@ -22,7 +22,7 @@ const updateGroupNameFunction = async (array) => {
   //   { ...fields },
   //   { new: true }
   // );
-  // if (whatsapp.client?.info == undefined) {
+  // if (whatsapp.client.info == undefined) {
   //   const m = "Whatsapp is not ready yet or Something went wrong";
   //   return m;
   // } else {
@@ -100,8 +100,8 @@ const deleteGroup = async (id) => {
 const getLink = async () => {
   // get the current share link
   const link = await GroupLink.findOne({ activeForShare: true });
-  const linkId = link?._id.toString();
-  const members = link?.members;
+  const linkId = link._id.toString();
+  const members = link.members;
 
   if (members > 250) {
     await GroupLink.findOneAndUpdate(
@@ -119,7 +119,7 @@ const getLink = async () => {
       .where("members")
       .lt(250);
 
-    const id = newGroup?._id?.toString();
+    const id = newGroup._id.toString();
 
     const activeNewGroup = await GroupLink.findOneAndUpdate(
       { _id: id },
