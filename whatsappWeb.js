@@ -2,9 +2,9 @@ const qrcode = require("qrcode-terminal");
 const email = require("./utils/sendEmail");
 const qrImage = require("qr-image");
 const fs = require("fs");
-const { Client, LocalAuth, LegacySessionAuth } = require("whatsapp-web.js");
+const { Client, LocalAuth } = require("whatsapp-web.js");
 const client = new Client({
-  authStrategy: new LocalAuth(),
+  authStrategy: new LocalAuth({ dataPath: "./session" }),
   puppeteer: {
     headless: true,
     args: ["--no-sandbox"],
@@ -15,7 +15,7 @@ client.on("qr", async (qr) => {
   qrcode.generate(qr, { small: true });
   const svg_string = qrImage.imageSync(qr, { type: "png" });
   const convertIntobase64 = Buffer.from(svg_string).toString("base64");
-  console.log(qr)
+  console.log(qr);
 
   // await email.sendEmail({
   //   subject: "Whatsapp Login QR",
